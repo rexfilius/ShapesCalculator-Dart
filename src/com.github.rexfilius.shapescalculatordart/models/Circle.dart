@@ -35,7 +35,7 @@ class Circle extends Shape implements Measurable {
     while (true) {
       try {
         _getRadiusOfCircle();
-        print("Perimeter of circle: ${_circle.area()}");
+        print("Perimeter of circle: ${_circle.perimeter()}");
         break;
       } on FormatException {
         print("\nYOU ENTERED INVALID DATA\n");
