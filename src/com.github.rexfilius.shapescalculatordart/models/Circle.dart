@@ -45,8 +45,9 @@ class Circle extends Shape implements Measurable {
 
   void _getRadiusOfCircle() {
     print("Type in the radius of the circle");
-    var arg = stdin.readLineSync();
-    _circle.radius = arg as double;
+    var arg = double.parse(stdin.readLineSync()!);
+    //var arg = double.tryParse(stdin.readLineSync()!);
+    _circle.radius = arg;
     print("Radius: $arg");
   }
 }

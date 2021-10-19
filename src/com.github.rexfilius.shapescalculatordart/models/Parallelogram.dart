@@ -18,13 +18,13 @@ class Parallelogram extends Shape implements Measurable {
     while (true) {
       try {
         print("Type in the BaseLength of the parallelogram");
-        var arg1 = stdin.readLineSync();
-        _parallelogram.baseLength = arg1 as double;
+        var arg1 = double.parse(stdin.readLineSync()!);
+        _parallelogram.baseLength = arg1;
         print("BaseLength: $arg1");
 
         print("Type in the Height of the parallelogram");
-        var arg2 = stdin.readLineSync();
-        _parallelogram.height = arg2 as double;
+        var arg2 = double.parse(stdin.readLineSync()!);
+        _parallelogram.height = arg2;
         print("Height: $arg2");
 
         print("Area of parallelogram: ${_parallelogram.area()}");
@@ -41,13 +41,13 @@ class Parallelogram extends Shape implements Measurable {
     while (true) {
       try {
         print("Type in the BaseLength of the parallelogram");
-        var arg1 = stdin.readLineSync();
-        _parallelogram.baseLength = arg1 as double;
+        var arg1 = double.parse(stdin.readLineSync()!);
+        _parallelogram.baseLength = arg1;
         print("BaseLength: $arg1");
 
         print("Type in the SideLength of the parallelogram");
-        var arg2 = stdin.readLineSync();
-        _parallelogram.sideLength = arg2 as double;
+        var arg2 = double.parse(stdin.readLineSync()!);
+        _parallelogram.sideLength = arg2;
         print("Height: $arg2");
 
         print("Perimeter of parallelogram: ${_parallelogram.perimeter()}");

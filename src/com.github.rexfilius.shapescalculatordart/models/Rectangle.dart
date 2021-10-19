@@ -42,13 +42,13 @@ class Rectangle extends Shape implements Measurable {
 
   void _getLengthAndBreadth() {
     print("Type in the Length of the Rectangle");
-    var arg1 = stdin.readLineSync();
-    _rectangle.length = arg1 as double;
+    var arg1 = double.parse(stdin.readLineSync()!);
+    _rectangle.length = arg1;
     print("Length: $arg1");
 
     print("Type in the breadth of the Rectangle");
-    var arg2 = stdin.readLineSync();
-    _rectangle.breadth = arg2 as double;
+    var arg2 = double.parse(stdin.readLineSync()!);
+    _rectangle.breadth = arg2;
     print("Breadth: $arg2");
   }
 }

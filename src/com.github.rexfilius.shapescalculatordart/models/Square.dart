@@ -42,8 +42,8 @@ class Square extends Shape implements Measurable {
 
   void _getSideLength() {
     print("Type in the SideLength of the Square");
-    var arg = stdin.readLineSync();
-    _square.sideLength = arg as double;
+    var arg = double.parse(stdin.readLineSync()!);
+    _square.sideLength = arg;
     print("SideLength: $arg");
   }
 }

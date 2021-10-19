@@ -18,13 +18,13 @@ class Triangle extends Shape implements Measurable {
     while (true) {
       try {
         print("Type in the BaseLength of the Triangle");
-        var arg1 = stdin.readLineSync();
-        _triangle.baseLength = arg1 as double;
+        var arg1 = double.parse(stdin.readLineSync()!);
+        _triangle.baseLength = arg1;
         print("BaseLength: $arg1");
 
         print("Type in the Height of the Triangle");
-        var arg2 = stdin.readLineSync();
-        _triangle.height = arg2 as double;
+        var arg2 = double.parse(stdin.readLineSync()!);
+        _triangle.height = arg2;
         print("Height: $arg2");
 
         print("Area of Triangle: ${_triangle.area()}");
@@ -41,18 +41,18 @@ class Triangle extends Shape implements Measurable {
     while (true) {
       try {
         print("Type in the SideLength-1 of the Triangle");
-        var arg1 = stdin.readLineSync();
-        _triangle.sideLength1 = arg1 as double;
+        var arg1 = double.parse(stdin.readLineSync()!);
+        _triangle.sideLength1 = arg1;
         print("SideLength-1: $arg1");
 
         print("Type in the SideLength-2 of the Triangle");
-        var arg2 = stdin.readLineSync();
-        _triangle.sideLength2 = arg2 as double;
+        var arg2 = double.parse(stdin.readLineSync()!);
+        _triangle.sideLength2 = arg2;
         print("SideLength-2: $arg2");
 
         print("Type in the BaseLength of the Triangle");
-        var arg3 = stdin.readLineSync();
-        _triangle.baseLength = arg3 as double;
+        var arg3 = double.parse(stdin.readLineSync()!);
+        _triangle.baseLength = arg3;
         print("BaseLength: $arg3");
 
         print("Perimeter of Triangle: ${_triangle.perimeter()}");
