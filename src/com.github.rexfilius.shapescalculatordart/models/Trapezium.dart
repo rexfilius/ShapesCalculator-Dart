@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'Measurable.dart';
 import 'Shape.dart';
 
-class Trapezium extends Shape implements Measurable {
+class Trapezium extends Shape {
   late Trapezium _trapezium;
 
   @override

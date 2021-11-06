@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'Measurable.dart';
 import 'Shape.dart';
 
-class Square extends Shape implements Measurable {
+class Square extends Shape {
   late Square _square;
 
   @override

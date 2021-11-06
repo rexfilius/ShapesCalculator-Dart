@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'Measurable.dart';
 import 'Shape.dart';
 
-class Parallelogram extends Shape implements Measurable {
+class Parallelogram extends Shape {
   late Parallelogram _parallelogram;
 
   @override

@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'Measurable.dart';
 import 'Shape.dart';
 
-class Triangle extends Shape implements Measurable {
+class Triangle extends Shape {
   late Triangle _triangle;
 
   @override

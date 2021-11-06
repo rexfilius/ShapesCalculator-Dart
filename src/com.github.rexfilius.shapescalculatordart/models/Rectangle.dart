@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'Measurable.dart';
 import 'Shape.dart';
 
-class Rectangle extends Shape implements Measurable {
+class Rectangle extends Shape {
   late Rectangle _rectangle;
 
   @override
