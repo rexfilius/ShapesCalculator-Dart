@@ -1,9 +1,4 @@
-import '../models/Circle.dart';
-import '../models/Parallelogram.dart';
-import '../models/Rectangle.dart';
-import '../models/Square.dart';
-import '../models/Trapezium.dart';
-import '../models/Triangle.dart';
+import '../models/models.dart';
 import 'Screen.dart';
 
 void runCalculator() {
