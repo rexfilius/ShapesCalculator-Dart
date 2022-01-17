@@ -29,7 +29,7 @@ class Parallelogram extends Shape {
         print("Area of parallelogram: ${_parallelogram.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -52,7 +52,7 @@ class Parallelogram extends Shape {
         print("Perimeter of parallelogram: ${_parallelogram.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }

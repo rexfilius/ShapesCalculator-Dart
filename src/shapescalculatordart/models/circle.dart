@@ -23,7 +23,7 @@ class Circle extends Shape implements Measurable {
         print("Area of circle: ${_circle.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -38,7 +38,7 @@ class Circle extends Shape implements Measurable {
         print("Perimeter of circle: ${_circle.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }

@@ -29,7 +29,7 @@ class Triangle extends Shape {
         print("Area of Triangle: ${_triangle.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -57,7 +57,7 @@ class Triangle extends Shape {
         print("Perimeter of Triangle: ${_triangle.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }

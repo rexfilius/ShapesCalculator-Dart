@@ -2,17 +2,19 @@ import 'dart:io';
 
 import 'calculator.dart';
 
-const INVALID_DATA = "\nYOU ENTERED INVALID DATA\n";
-const INVALID_CASING = "\nCHECK YOUR CASING/WORDS. TYPE CORRECTLY\n";
+const INVALID_DATA = "\nERROR!! - You entered invalid data\n";
+const INVALID_CASING = "\nERROR!! - Check your words. Type correctly\n";
+const INVALID_INPUT = "\nERROR!! - Invalid Input\n";
 
 var _select = "";
 var parameter = "";
 
 String firstMenu() {
-  var firstMessage =
-      """This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes
+  var firstMessage = """
+  This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes
   List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]
-  Select a Shape: [Type it in]""";
+  Select a Shape: [Type it in]
+  """;
 
   print(firstMessage);
   _select = stdin.readLineSync() as String;
@@ -58,11 +60,11 @@ void thirdMenu() {
         print("End of Program\n");
         break;
       default:
-        print("Invalid Input");
+        print(INVALID_INPUT);
         thirdMenu();
     }
   } on FormatException {
-    print("\nInvalid Input\n");
+    print(INVALID_INPUT);
     thirdMenu();
   }
 }

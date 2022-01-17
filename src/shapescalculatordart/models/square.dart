@@ -20,7 +20,7 @@ class Square extends Shape {
         print("Area of Square is ${_square.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -34,7 +34,7 @@ class Square extends Shape {
         print("Perimeter of Square is ${_square.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }

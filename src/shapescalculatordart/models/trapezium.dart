@@ -34,7 +34,7 @@ class Trapezium extends Shape {
         print("Area of Trapezium: ${_trapezium.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -67,7 +67,7 @@ class Trapezium extends Shape {
         print("Perimeter of Trapezium: ${_trapezium.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }

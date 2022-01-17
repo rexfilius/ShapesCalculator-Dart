@@ -20,7 +20,7 @@ class Rectangle extends Shape {
         print("Area of Rectangle: ${_rectangle.area()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
@@ -34,7 +34,7 @@ class Rectangle extends Shape {
         print("Perimeter of Rectangle: ${_rectangle.perimeter()}");
         break;
       } on FormatException {
-        print("\nYOU ENTERED INVALID DATA\n");
+        print("\nERROR!! - You entered invalid data\n");
       }
     }
   }
