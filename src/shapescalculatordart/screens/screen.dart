@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Calculator.dart';
+import 'calculator.dart';
 
 const INVALID_DATA = "\nYOU ENTERED INVALID DATA\n";
 const INVALID_CASING = "\nCHECK YOUR CASING/WORDS. TYPE CORRECTLY\n";

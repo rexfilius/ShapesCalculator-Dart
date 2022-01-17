@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Shape.dart';
+import 'shape.dart';
 
 class Triangle extends Shape {
   late Triangle _triangle;

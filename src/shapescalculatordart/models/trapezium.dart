@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Shape.dart';
+import 'shape.dart';
 
 class Trapezium extends Shape {
   late Trapezium _trapezium;

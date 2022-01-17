@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Shape.dart';
+import 'shape.dart';
 
 class Square extends Shape {
   late Square _square;

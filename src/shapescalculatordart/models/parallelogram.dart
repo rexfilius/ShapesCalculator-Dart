@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Shape.dart';
+import 'shape.dart';
 
 class Parallelogram extends Shape {
   late Parallelogram _parallelogram;

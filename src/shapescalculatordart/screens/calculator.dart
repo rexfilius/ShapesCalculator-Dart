@@ -1,5 +1,5 @@
 import '../models/models.dart';
-import 'Screen.dart';
+import 'screen.dart';
 
 void runCalculator() {
   String selectInput;

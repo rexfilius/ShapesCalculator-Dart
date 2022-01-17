@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'Measurable.dart';
-import 'Shape.dart';
+import 'measurable.dart';
+import 'shape.dart';
 import 'dart:math';
 
 class Circle extends Shape implements Measurable {

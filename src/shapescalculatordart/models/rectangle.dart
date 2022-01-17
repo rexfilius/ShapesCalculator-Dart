@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'Shape.dart';
+import 'shape.dart';
 
 class Rectangle extends Shape {
   late Rectangle _rectangle;
