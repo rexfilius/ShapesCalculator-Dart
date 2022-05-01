@@ -1,4 +1,4 @@
-import 'measurable.dart';
+import '../shape_lib.dart';
 
 abstract class Shape implements Measurable {
   var length = 0.0;
@@ -10,4 +10,17 @@ abstract class Shape implements Measurable {
   var topLength = 0.0;
   var baseLength = 0.0;
   var radius = 0.0;
+}
+
+void measureShape(int number, Shape shape) {
+  switch (number) {
+    case 1:
+      shape.calculateArea();
+      break;
+    case 2:
+      shape.calculatePerimeter();
+      break;
+    default:
+      break;
+  }
 }

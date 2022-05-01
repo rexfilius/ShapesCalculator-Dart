@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'shape.dart';
+import '../../shape_lib.dart';
 
 class Trapezium extends Shape {
   late Trapezium _trapezium;
@@ -34,7 +33,7 @@ class Trapezium extends Shape {
         print("Area of Trapezium: ${_trapezium.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -67,7 +66,7 @@ class Trapezium extends Shape {
         print("Perimeter of Trapezium: ${_trapezium.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }

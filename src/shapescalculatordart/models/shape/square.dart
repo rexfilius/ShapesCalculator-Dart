@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'shape.dart';
+import '../../shape_lib.dart';
 
 class Square extends Shape {
   late Square _square;
@@ -20,7 +19,7 @@ class Square extends Shape {
         print("Area of Square is ${_square.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -34,7 +33,7 @@ class Square extends Shape {
         print("Perimeter of Square is ${_square.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -45,4 +44,5 @@ class Square extends Shape {
     _square.sideLength = arg;
     print("SideLength: $arg");
   }
+
 }

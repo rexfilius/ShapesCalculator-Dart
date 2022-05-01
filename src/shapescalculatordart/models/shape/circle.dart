@@ -1,10 +1,8 @@
 import 'dart:io';
-
-import 'measurable.dart';
-import 'shape.dart';
+import '../../shape_lib.dart';
 import 'dart:math';
 
-class Circle extends Shape implements Measurable {
+class Circle extends Shape {
   late Circle _circle;
 
   @override
@@ -23,7 +21,7 @@ class Circle extends Shape implements Measurable {
         print("Area of circle: ${_circle.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -38,7 +36,7 @@ class Circle extends Shape implements Measurable {
         print("Perimeter of circle: ${_circle.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -46,7 +44,6 @@ class Circle extends Shape implements Measurable {
   void _getRadiusOfCircle() {
     print("Type in the radius of the circle");
     var arg = double.parse(stdin.readLineSync()!);
-    //var arg = double.tryParse(stdin.readLineSync()!);
     _circle.radius = arg;
     print("Radius: $arg");
   }

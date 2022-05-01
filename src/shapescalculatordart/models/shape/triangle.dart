@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'shape.dart';
+import '../../shape_lib.dart';
 
 class Triangle extends Shape {
   late Triangle _triangle;
@@ -29,7 +28,7 @@ class Triangle extends Shape {
         print("Area of Triangle: ${_triangle.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -57,7 +56,7 @@ class Triangle extends Shape {
         print("Perimeter of Triangle: ${_triangle.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }

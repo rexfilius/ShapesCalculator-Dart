@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'shape.dart';
+import '../../shape_lib.dart';
 
 class Parallelogram extends Shape {
   late Parallelogram _parallelogram;
@@ -29,7 +28,7 @@ class Parallelogram extends Shape {
         print("Area of parallelogram: ${_parallelogram.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -52,7 +51,7 @@ class Parallelogram extends Shape {
         print("Perimeter of parallelogram: ${_parallelogram.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }

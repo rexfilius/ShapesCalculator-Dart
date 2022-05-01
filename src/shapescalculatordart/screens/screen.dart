@@ -1,55 +1,79 @@
 import 'dart:io';
+import '../shape_lib.dart';
 
-import 'calculator.dart';
+const INVALID_INPUT = "\nERROR! - Invalid Input\n";
 
-const INVALID_DATA = "\nERROR!! - You entered invalid data\n";
-const INVALID_CASING = "\nERROR!! - Check your words. Type correctly\n";
-const INVALID_INPUT = "\nERROR!! - Invalid Input\n";
+var selectedShape = 0;
+var selectedCalculation = 0;
 
-var _select = "";
-var parameter = "";
+final calculationMenu = {
+  1: 'Area',
+  2: 'Perimeter',
+};
 
-String firstMenu() {
+final shapeMenu = {
+  1: Shapes.Triangle,
+  2: Shapes.Circle,
+  3: Shapes.Square,
+  4: Shapes.Rectangle,
+  5: Shapes.Parallelogram,
+  6: Shapes.Trapezium,
+};
+
+Shapes? menuToSelectShape() {
   var firstMessage = """
   This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes
-  List of Shapes: [Triangle, Circle, Square, Rectangle, Parallelogram, Trapezium]
-  Select a Shape: [Type it in]
+  Type in a NUMBER corresponding to the SHAPE
   """;
-
   print(firstMessage);
-  _select = stdin.readLineSync() as String;
-  _checkFirstMenu();
-  return _select;
+  for (final shape in shapeMenu.entries) {
+    print("${shape.key} - ${shape.value.name}");
+  }
+
+  try {
+    selectedShape = int.parse(stdin.readLineSync() as String);
+    checkMenuToSelectShape();
+    return shapeMenu[selectedShape];
+  } on Exception {
+    print(INVALID_INPUT);
+    menuToSelectShape();
+  }
+  return null;
 }
 
-void _checkFirstMenu() {
-  while (!(_select == "Circle" ||
-      _select == "Triangle" ||
-      _select == "Square" ||
-      _select == "Rectangle" ||
-      _select == "Parallelogram" ||
-      _select == "Trapezium")) {
-    print(INVALID_CASING);
-    firstMenu();
+void checkMenuToSelectShape() {
+  while (!(shapeMenu.containsKey(selectedShape))) {
+    print('\nPlease type in the NUMBER corresponding with the SHAPE\n');
+    menuToSelectShape();
   }
 }
 
-String secondMenu() {
-  print("What do you want to calculate: Area? or Perimeter? [Type it in]");
-  parameter = stdin.readLineSync() as String;
-  _checkSecondMenu();
-  return parameter;
+int menuToSelectMeasurement() {
+  print("What do you want to calculate:");
+  int measurement = 0;
+  for (final selection in calculationMenu.entries) {
+    print("${selection.key} - ${selection.value}");
+  }
+  try {
+    selectedCalculation = int.parse(stdin.readLineSync() as String);
+    checkMenuToSelectMeasurement();
+    measurement = selectedCalculation;
+  } on Exception {
+    print(INVALID_INPUT);
+    menuToSelectMeasurement();
+  }
+  return measurement;
 }
 
-void _checkSecondMenu() {
-  while (!(parameter == "Area" || parameter == "Perimeter")) {
-    print(INVALID_CASING);
-    secondMenu();
+void checkMenuToSelectMeasurement() {
+  while (!(calculationMenu.containsKey(selectedCalculation))) {
+    print('\nPlease type in the corresponding NUMBER\n');
+    menuToSelectMeasurement();
   }
 }
 
-void thirdMenu() {
-  print("\nPress 1 to go back to MENU\nPress 2 to END");
+void menuToContinueOrEnd() {
+  print("\nType 1 to go back to MENU\nType 2 to END");
   try {
     var input = int.parse(stdin.readLineSync()!);
     switch (input) {
@@ -61,10 +85,10 @@ void thirdMenu() {
         break;
       default:
         print(INVALID_INPUT);
-        thirdMenu();
+        menuToContinueOrEnd();
     }
   } on FormatException {
     print(INVALID_INPUT);
-    thirdMenu();
+    menuToContinueOrEnd();
   }
 }

@@ -1,6 +1,5 @@
 import 'dart:io';
-
-import 'shape.dart';
+import '../../shape_lib.dart';
 
 class Rectangle extends Shape {
   late Rectangle _rectangle;
@@ -20,7 +19,7 @@ class Rectangle extends Shape {
         print("Area of Rectangle: ${_rectangle.area()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }
@@ -34,7 +33,7 @@ class Rectangle extends Shape {
         print("Perimeter of Rectangle: ${_rectangle.perimeter()}");
         break;
       } on FormatException {
-        print("\nERROR!! - You entered invalid data\n");
+        print(INVALID_INPUT);
       }
     }
   }

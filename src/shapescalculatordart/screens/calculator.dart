@@ -1,56 +1,42 @@
-import '../models/models.dart';
-import 'screen.dart';
+import '../shape_lib.dart';
 
 void runCalculator() {
-  String selectInput;
-  switch (firstMenu()) {
-    case "Triangle":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Triangle().calculateArea();
-      else
-        Triangle().calculatePerimeter();
+  int selectedMeasurement;
+  final selectedShape = menuToSelectShape();
+
+  switch (selectedShape) {
+    case Shapes.Triangle:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Triangle());
       break;
 
-    case "Circle":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Circle().calculateArea();
-      else
-        Circle().calculatePerimeter();
+    case Shapes.Circle:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Circle());
       break;
 
-    case "Square":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Square().calculateArea();
-      else
-        Square().calculatePerimeter();
+    case Shapes.Square:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Square());
       break;
 
-    case "Rectangle":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Rectangle().calculateArea();
-      else
-        Rectangle().calculatePerimeter();
+    case Shapes.Rectangle:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Rectangle());
       break;
 
-    case "Parallelogram":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Parallelogram().calculateArea();
-      else
-        Parallelogram().calculatePerimeter();
+    case Shapes.Parallelogram:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Parallelogram());
       break;
 
-    case "Trapezium":
-      selectInput = secondMenu();
-      if (selectInput == "Area")
-        Trapezium().calculateArea();
-      else
-        Trapezium().calculatePerimeter();
+    case Shapes.Trapezium:
+      selectedMeasurement = menuToSelectMeasurement();
+      measureShape(selectedMeasurement, Trapezium());
+      break;
+
+    default:
       break;
   }
-  thirdMenu();
+  menuToContinueOrEnd();
 }

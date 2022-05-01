@@ -1,4 +1,4 @@
-import 'calculator.dart';
+import '../shape_lib.dart';
 
 void main() {
   runCalculator();
