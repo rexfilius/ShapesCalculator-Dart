@@ -6,7 +6,7 @@ abstract class Measurable {
   void calculatePerimeter();
 }
 
-enum Shapes {
+enum ShapeList {
   Triangle,
   Circle,
   Square,

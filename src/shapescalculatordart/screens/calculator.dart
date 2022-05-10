@@ -5,32 +5,32 @@ void runCalculator() {
   final selectedShape = menuToSelectShape();
 
   switch (selectedShape) {
-    case Shapes.Triangle:
+    case ShapeList.Triangle:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Triangle());
       break;
 
-    case Shapes.Circle:
+    case ShapeList.Circle:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Circle());
       break;
 
-    case Shapes.Square:
+    case ShapeList.Square:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Square());
       break;
 
-    case Shapes.Rectangle:
+    case ShapeList.Rectangle:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Rectangle());
       break;
 
-    case Shapes.Parallelogram:
+    case ShapeList.Parallelogram:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Parallelogram());
       break;
 
-    case Shapes.Trapezium:
+    case ShapeList.Trapezium:
       selectedMeasurement = menuToSelectMeasurement();
       measureShape(selectedMeasurement, Trapezium());
       break;

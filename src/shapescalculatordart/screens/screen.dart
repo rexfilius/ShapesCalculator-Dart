@@ -12,15 +12,15 @@ final calculationMenu = {
 };
 
 final shapeMenu = {
-  1: Shapes.Triangle,
-  2: Shapes.Circle,
-  3: Shapes.Square,
-  4: Shapes.Rectangle,
-  5: Shapes.Parallelogram,
-  6: Shapes.Trapezium,
+  1: ShapeList.Triangle,
+  2: ShapeList.Circle,
+  3: ShapeList.Square,
+  4: ShapeList.Rectangle,
+  5: ShapeList.Parallelogram,
+  6: ShapeList.Trapezium,
 };
 
-Shapes? menuToSelectShape() {
+ShapeList? menuToSelectShape() {
   var firstMessage = """
   This Application Calculates The Area And Perimeter Of 2-Dimensional Shapes
   Type in a NUMBER corresponding to the SHAPE
